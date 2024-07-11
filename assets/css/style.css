@@ -15,57 +15,59 @@
     transform: translateY(0);
 }
 
-.side-menu{
+.side-menu,.side-menu2{
     list-style: none;
 }
 
-.side-menu li:nth-child(5){
-    position: relative;
-}
 
-.side-menu li:nth-child(5) ul {
-    position: absolute;
-    left: 150%;
-}
-
-.side-menu li:nth-child(5) ul li a{
-    width: max-content;
-    display: inline-block;
-}
-.side-menu li:nth-child(6) ul {
-    position: absolute;
-    left: 20%;
-}
-
-.side-menu li:nth-child(6) ul li a{
-    width: max-content;
-    display: inline-block;
-}
-
-.side-menu li{
-    padding: 5px 10px;
-    border: 1px solid rgb(36, 36, 36);
-    margin-bottom: 10px;
-    border-radius: 5px;
-    width: fit-content;
-    width: -moz-fit-content;
-    transition: all 0.3s ease-in-out ;
-}
-
-.side-menu li:hover{
-    background-color: white;
-    border: none;
-}
-
-.side-menu li:hover a{
-    color: black;
-}
-
-.side-menu li a{
+.side-menu li a, .side-menu2 li a{
     text-decoration: none;
+    text-transform: uppercase;
     color: inherit;
     text-transform: uppercase;
 }
+
+.side-menu li, .side-menu2 li{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 5px 8px;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+
+
+.side-menu li:hover, .side-menu2 li:hover{
+    background: white;
+    border: none;
+}
+
+.side-menu li:nth-child(5):hover ul, side-menu li:nth-child(5) ul:hover{
+    display: block;
+}
+.side-menu li:nth-child(6):hover ul, side-menu li:nth-child(6) ul:hover{
+    display: block;
+}
+
+.side-menu li ul, .side-menu2 li ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 105%;
+    display: none;
+}
+
+.side-menu li ul li{
+    width: max-content;
+    border: none;
+    border-bottom: 1px solid black ;
+    border-radius: 0px;
+}
+
+
 
 .cross-container i{
     font-size: 40px;
@@ -75,6 +77,12 @@
     font-size: 40px;
     color: whitesmoke;
 }
+
+
+
+
+
+
 
 
 header{

@@ -35,37 +35,27 @@
                 <li><a href="">Login</a></li>
                 <li><a href="">Allergy Medicines</a></li>
                 <li><a href="">Hair Care</a>
-                    <!-- <i class="fa-solid fa-caret-right"></i> -->
                     <ul>
                         <li><a href="">Shiny Hair</a></li>
                         <li><a href="">Shiny Hair 1%</a></li>
                     </ul>
                 </li>
                 <li><a href="">Our Product</a>
-                    <!-- <i class="fa-solid fa-caret-right"></i> -->
-                <ul>
-                    <li><a href="">ItroLiv 100</a></li>
-                    <li><a href="">ItroLiv FT</a></li>
-                    <li><a href="">Lcliv 10</a></li>
-                    <li><a href="">ItRacking 200</a></li>
-                    <li><a href="">ItRacking 200</a></li>
-                    <li><a href="">ItroLiv 100</a></li>
-                    <li><a href="">ItroLiv FT</a></li>
-                    <li><a href="">Lcliv 10</a></li>
-                    <li><a href="">ItRacking 200</a></li>
-                    <li><a href="">ItRacking 200</a></li>
-                </ul>
-                    
+                    <ul>
+                        <li><a href="">Shiny Hair</a></li>
+                        <li><a href="">Shiny Hair 1%</a></li>
+                    </ul>
                 </li>
             </ul>
-            <ul class="side-menu">
+            
+            <ul class="side-menu2">
                 <li><a href="">About Us</a></li>
                 <li><a href="">Faq's</a></li>
                 <li><a href="">Blog</a></li>
                 <li><a href="">Contact Us</a></li>
             </ul>
         </div>
-       
+
 
 
     </section>
@@ -451,51 +441,52 @@
             <div class="row d-flex ">
 
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="d-flex align-items-center justify-content-center gap-3">
+                    <div class="d-flex align-items-center justify-content-lg-center justify-content-start gap-2">
                         <img src="./assets/imgs/Shipping.png" alt="">
                         <div>
-                            <p>
+                            <h6>
                                 Free Worldwide Shipping
-                            </p>
+                            </h6>
                             <p>On all orders over $25.00</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="d-flex align-items-center justify-content-center gap-3">
+                    <div class="d-flex align-items-center justify-content-lg-center justify-content-start gap-2">
                         <img src="./assets/imgs/Payment Card.png" alt="">
                         <div>
-                            <p>
-                                Free Worldwide Shipping
-                            </p>
-                            <p>On all orders over $25.00</p>
+                            <h6>
+                                100% Secure Payment
+                            </h6>
+                            <p>PayPal / MasterCard / Visa</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="d-flex align-items-center justify-content-center gap-3">
+                    <div class="d-flex align-items-center justify-content-lg-center justify-content-start gap-2">
                         <img src="./assets/imgs/Returns.png" alt="">
                         <div>
-                            <p>
-                                Free Worldwide Shipping
-                            </p>
-                            <p>On all orders over $25.00</p>
+                            <h6>
+                                Easy 30 Days Returns
+                            </h6>
+                            <p>Money back guarantee</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="d-flex align-items-center justify-content-center gap-3">
+                    <div class="d-flex align-items-center justify-content-lg-center justify-content-start gap-2">
                         <img src="./assets/imgs/Customer Support.png" alt="">
                         <div>
-                            <p>
-                                Free Worldwide Shipping
-                            </p>
-                            <p>On all orders over $25.00</p>
+                            <h6>
+                                Customer Support
+                            </h6>
+                            <p>Need Assistence?</p>
                         </div>
                     </div>
                 </div>
-
-
 
             </div>
         </div>
@@ -632,17 +623,19 @@
 
 
         $(".carousel1").owlCarousel({
-            items: 1, // Number of items to display
-            loop: true, // Enable infinite loop
-            margin: 20, // Margin between items
-            autoplay: true, // Enable auto play
-            autoplayTimeout: 6000, // Auto play interval
+            items: 1,
+            loop: true,
+            margin: 10,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
             responsive: {
                 0: {
                     items: 1
                 },
                 600: {
-                    items: 3
+                    items: 2
                 },
                 1000: {
                     items: 4
@@ -651,11 +644,13 @@
         });
 
         $(".carousel2").owlCarousel({
-            items: 1, // Number of items to display
-            loop: true, // Enable infinite loop
-            margin: 20, // Margin between items
-            autoplay: true, // Enable auto play
-            autoplayTimeout: 6000, // Auto play interval
+            items: 1,
+            loop: true,
+            margin: 10,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
             responsive: {
                 0: {
                     items: 1
@@ -675,6 +670,8 @@
         $(".cross-container i").click(function () {
             $(".side-menu-container").removeClass("active");
         });
+
+        $('.side-menu > li').slice(-2).append('<i class="fa-solid fa-caret-right"></i>');
 
     });
 </script>
