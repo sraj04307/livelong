@@ -361,26 +361,86 @@ header i{
   }
 
   footer .row2{
-    padding: 50px 0;
+    padding: 20px 0;
     border-bottom: 2px dotted rgb(0, 0, 155);
+  }
+
+  footer .row2 li{
+    line-height: 35px;
   }
 
   footer .logo{
     width: 200px;
 }
 
+footer .contact-ul li p{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .contact-ul li p i{
+    color: #4755fc;
+}
+
 footer a{
     text-decoration: none;
     color: white;
 }
-footer h5{
+footer h4{
     text-transform: uppercase;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
+    color: #4755fc;
 }
 
 footer ul{
     list-style: none;
+    list-style-position: inside;
     padding: 0;
+}
+
+footer .quick-link-ul li {
+    position: relative;
+    padding-left: 1.2em; /* Add space for the custom marker */
+    display: flex;
+    padding-bottom: 5px;
+    align-items: center;
+    
+}
+
+footer .quick-link-ul li a{
+    font-size: 17px;
+}
+
+footer .useful-link-ul li {
+    position: relative;
+    padding-left: 1.2em; /* Add space for the custom marker */
+    display: flex;
+    padding-bottom: 5px;
+    align-items: center;
+    
+}
+
+footer .useful-link-ul li a{
+    font-size: 17px;
+}
+
+
+footer .quick-link-ul li::before {
+    content: "-";
+    position: absolute;
+    color: #4755fc;
+    font-size: 30px;
+    left: 0;
+    padding-bottom: 5px;
+}
+footer .useful-link-ul li::before {
+    content: "-";
+    position: absolute;
+    color: #4755fc;
+    font-size: 30px;
+    left: 0;
+    padding-bottom: 5px;
 }
 
 footer label{
@@ -390,8 +450,68 @@ footer label{
 footer .row3 .links ul{
     display: flex;
 }
- 
 
+
+
+/* contact page */
+
+.contact-page{
+    padding: 150px 0;
+    padding-bottom: 50px;
+}
+
+.contact-page .left >div,.contact-page .right > div{
+    background: #e7e7e7;
+    height: 100%;
+    padding: 20px;
+}
+
+.contact-page .left input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 8px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #efefef;
+
+}
+
+.contact-page .left textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #efefef;
+    height: 150px;
+    resize: none;
+
+}
+
+.contact-page .left button{
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    background: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.contact-page .left h1{
+    margin-bottom: 20px;
+}
+.contact-page .right h1{
+    margin-bottom: 20px;
+}
+ 
+.contact-page .sr-border{
+    border: 1.3px solid black;
+
+}
+
+.contact-page .right strong{
+    font-size: 20px;
+}
 
 
 @media only screen and (max-width: 769px) {
@@ -585,4 +705,8 @@ footer .row3 .links ul{
         padding: 1rem !important;
      }
     
+  }
+
+  .carousel-indicators {
+    display: none;
   }
